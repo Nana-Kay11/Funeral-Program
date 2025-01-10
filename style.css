@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(background.jpg); /* Background image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim overlay */
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+    color: #444;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px; /* Reduce margin on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    
+    header, footer {
+        padding: 15px 0; /* Adjust padding for header and footer */
+    }
+    
+    h2 {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+    
+    textarea {
+        font-size: 1em; /* Make textarea font size responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Further adjust heading size for very small screens */
+    }
+    
+    textarea {
+        font-size: 0.9em; /* Further adjust textarea font size */
+    }
+    
+    footer {
+        font-size: 0.9em; /* Adjust footer font size */
+    }
+}
