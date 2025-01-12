@@ -60,14 +60,14 @@ p {
 }
 
 a {
-    color: #2042e9;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: black; /* Change link color to black */
+    text-decoration: underline; /* Underline the links */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 a:hover {
-    color: #111112;
-    text-decoration: underline;
+    color: #2042e9; /* Change color on hover */
+    text-decoration: underline; /* Keep underline on hover */
 }
 
 footer {
