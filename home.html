@@ -4,7 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funeral Program for Regina Egyir</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg'); /* Path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Keep the background fixed during scrolling */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            position: absolute; /* Fix the header at the top */
+            top: 0; /* Position it at the very top */
+            left: 0; /* Align it to the left */
+            right: 0; /* Align it to the right */
+            background-color: rgba(18, 18, 18, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1; /* Ensure it stays above other elements */
+        }
+        .container {
+            max-width: 900px;
+            margin: 100px auto 20px; /* Add margin at the top to avoid overlap with the fixed header */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px); /* Blur the background */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px 0;
+            background-color: rgba(18, 18, 18, 0.8);
+            color: #fff;
+        }
+        a {
+            color: rgb(12, 85, 244);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #00edf5;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,16 +90,10 @@
 
     <section>
         <h2><a href="eulogy.html">Eulogy</a></h2>
-        <p>A heartfelt tribute delivered by a close family member.</p>
     </section>
 
     <section>
-        <h2>Tributes</h2>
-        <p>
-            <a href="tribute by mother.html">Tribute by mother</a><br>
-            <a href="tribute by siblings.html">Tribute by siblings</a><br>
-            <a href="tribute by child.html">Tribute by child</a>
-        </p>
+        <h2><a href="tributes.html">Tributes</a></h2>
     </section>
 
     <section>
@@ -74,7 +128,7 @@
 </div>
 
 <footer>
-    <p>Thank you for joining us in honoring Regina Egyir.</p>
+    <p>In Loving Memory of Regina Egyir</p>
 </footer>
 
 </body>
