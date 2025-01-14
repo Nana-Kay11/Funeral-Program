@@ -50,8 +50,8 @@ section {
 }
 
 h2 {
-    color: #4CAF50; /* Updated header color */
-    border-bottom: 2px solid #4CAF50; /* Underline effect */
+    color: #111111; /* Updated header color */
+    border-bottom: 2px solid #111111; /* Underline effect */
     padding-bottom: 5px; /* Spacing below headers */
 }
 
@@ -60,13 +60,13 @@ p {
 }
 
 a {
-    color: black; /* Change link color to black */
+    color: rgb(12, 85, 244); /* Change link color to black */
     text-decoration: underline; /* Underline the links */
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
 a:hover {
-    color: #2042e9; /* Change color on hover */
+    color: #00edf5; /* Change color on hover */
     text-decoration: underline; /* Keep underline on hover */
 }
 
