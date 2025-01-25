@@ -14,18 +14,19 @@
             background-position: center; /* Center the background image */
             color: #333;
             line-height: 1.6;
+            overflow: hidden; /* Prevent scrollbars during animations */
         }
         .overlay {
-            position: absolute; /* Position absolute for overlay */
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-            z-index: 1; /* Place overlay above the background */
+            z-index: 1;
         }
         .program-container {
-            max-width: 600px;
+            max-width: 90%; /* Adjust width for smaller screens */
             margin: 50px auto; /* Center the container */
             padding: 20px;
             background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
@@ -34,31 +35,65 @@
             text-align: center; /* Center text */
             position: relative; /* Position relative for text */
             z-index: 2; /* Place content above the overlay */
+            opacity: 0; /* Start invisible for fade-in animation */
+            animation: fadeIn 2s ease-in-out forwards; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Start slightly above */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Move to original position */
+            }
         }
         .profile-image {
-            width: 150px; /* Fixed width for the round image */
-            height: 150px; /* Fixed height for the round image */
+            width: 120px; /* Smaller size for mobile */
+            height: 120px; /* Smaller size for mobile */
             border-radius: 50%; /* Make the image round */
             object-fit: cover; /* Ensure the image covers the entire area */
             margin-bottom: 20px; /* Space below the image */
+            animation: float 3s ease-in-out infinite; /* Floating animation */
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0); /* Start and end at original position */
+            }
+            50% {
+                transform: translateY(-10px); /* Move up slightly */
+            }
         }
         h1 {
-            font-size: 2.5em; /* Larger size for the name */
+            font-size: 2em; /* Smaller size for mobile */
             margin: 0;
             color: #333; /* Dark text color */
+            animation: slideIn 1.5s ease-in-out forwards; /* Slide-in animation */
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px); /* Start from the left */
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0); /* Move to original position */
+            }
         }
         h2 {
-            font-size: 2em; /* Slightly smaller size for the title */
+            font-size: 1.5em; /* Smaller size for mobile */
             margin: 10px 0;
             color: #151515; /* Gray text color */
+            animation: slideIn 1.5s ease-in-out 0.5s forwards; /* Slide-in animation with delay */
         }
         p {
-            font-size: 1.5em; /* Medium size for year range */
+            font-size: 1.2em; /* Smaller size for mobile */
             margin: 20px 0;
             color: #bbbaba; /* Lighter gray text color */
+            animation: fadeIn 2s ease-in-out 1s forwards; /* Fade-in animation with delay */
         }
         .home-link-container {
-            max-width: 300px; /* Width of the link box */
+            max-width: 80%; /* Adjust width for smaller screens */
             margin: 20px auto; /* Center the box */
             padding: 15px; /* Padding around the link */
             background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
@@ -66,10 +101,11 @@
             border-radius: 8px; /* Rounded corners */
             text-align: center; /* Center text inside the box */
             transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            animation: fadeIn 2s ease-in-out 1.5s forwards; /* Fade-in animation with delay */
         }
         .home-link {
             color: #2042e9; /* Link color */
-            font-size: 1.5em; /* Font size for the link text */
+            font-size: 1.2em; /* Smaller size for mobile */
             text-decoration: none; /* Remove underline */
             transition: color 0.3s ease; /* Smooth color transition */
         }
@@ -79,14 +115,42 @@
         }
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px; /* Reduce margin for smaller screens */
             padding: 10px 0;
             background-color: rgba(18, 18, 18, 0.8);
             color: #fff;
+            animation: fadeIn 2s ease-in-out 2s forwards; /* Fade-in animation with delay */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 600px) {
+            .program-container {
+                max-width: 600px; /* Fixed width for larger screens */
+            }
+            .profile-image {
+                width: 150px; /* Larger size for desktop */
+                height: 150px; /* Larger size for desktop */
+            }
+            h1 {
+                font-size: 2.5em; /* Larger size for desktop */
+            }
+            h2 {
+                font-size: 2em; /* Larger size for desktop */
+            }
+            p {
+                font-size: 1.5em; /* Larger size for desktop */
+            }
+            .home-link-container {
+                max-width: 300px; /* Fixed width for desktop */
+            }
+            .home-link {
+                font-size: 1.5em; /* Larger size for desktop */
+            }
         }
     </style>
 </head>
 <body>
+    <div class="overlay"></div> <!-- Dimmed background overlay -->
     <div class="program-container">
         <img src="images/regiii.jpg" alt="Regina Egyir" class="profile-image">
         <h1>Regina Nana</h1>

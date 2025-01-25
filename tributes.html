@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funeral Program for Regina Egyir - Tributes</title>
@@ -52,6 +52,7 @@
             font-size: 1.8em; /* Size for tribute titles */
             margin: 10px 0;
             color: #151515; /* Gray text color */
+            text-align: center;
         }
         p {
             font-size: 1.1em; /* Medium size for tribute text */
@@ -66,6 +67,15 @@
             color: #fff;
             position: relative; /* Ensure footer stays at the bottom */
             z-index: 2; /* Place footer above the overlay */
+        }
+        .center-image {
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Space between the image and the text */
+            margin-bottom: 10px; /* Space below the image */
+            border-radius: 50%; /* Make the image rounded */
+            width: 150px; /* Set a width for the image */
+            height: 150px; /* Set a height for the image */
+            object-fit: cover; /* Ensure the image covers the area */
         }
         .home-link {
             display: block;
@@ -90,16 +100,38 @@
         .image-gallery img {
             width: 20%; /* Adjust width to fit two images per row */
             margin-bottom: 10px; /* Space below each image */
-            border-radius: 5px; /* Rounded corners for images */
+            border-radius: 50%; /* Fully rounded (circular) images */
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for images */
+            aspect-ratio: 1 / 1; /* Ensure images are square for perfect circles */
+            object-fit: cover; /* Ensure images fill the space without distortion */
         }
         @media (max-width: 600px) {
             .image-gallery img {
                 width: 100%; /* Stack images on smaller screens */
             }
+            .center-image {
+                float: none; /* Disable float on smaller screens */
+                display: block;
+                margin: 0 auto 10px; /* Center the image */
+            }
         }
+            /* Media Queries for Responsiveness */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 600px; /* Fixed width for larger screens */
+            }
+            h1 {
+                font-size: 2.5em; /* Larger size for desktop */
+            }
+            h2 {
+                font-size: 2.8em; /* Larger size for desktop */
+            }
+            p {
+                font-size: 1.2em; /* Larger size for desktop */
+            }
+         }
     </style>
-</head>
+  </head>
 <body>
     <div class="overlay"></div> <!-- Dimmed background overlay -->
     <header>
@@ -108,33 +140,32 @@
     <div class="program-container">
         <h2>Tribute by Siblings</h2>
         <p>
+            <img src="images/Robert.jpg" alt="Robert" class="center-image">
             Tribute to Our beloved sister who we used to call Nana <br><br>
             To our dear sister, Regina Egyir,<br>
             As we gather to celebrate your life, we find ourselves reflecting on the incredible bond we shared. You were not just our sister; you were our acquaintance, our cheerleader, and our inspiration. <br><br>
-            We remember the adventures we had together—the late-night talks where we shared our dreams, the silly inside jokes that made us laugh until we cried, and the countless family gatherings where your radiant smile lit up the room. One of our most cherished memories is celebrating Mom’s birthday last year. The joy in the air was palpable as we all gathered around the table, sharing laughter and stories. It was a beautiful celebration, made even more special by the fact that you were with us, reminding us how precious these moments are. Your presence that day filled our hearts with gratitude and hope, and we celebrated not just Mom’s life but also the miracle of having you with us.<br><br>
-            Your strength and determination were evident throughout your life. Even during the toughest days, you faced each challenge with a smile and a resolve that taught us all the true meaning of resilience. You showed us how to find joy in the little things, and your laughter will forever echo in our hearts. <br><br>
+            We remember the adventures we had together—the late-night talks where we shared our dreams, the silly inside jokes that made us laugh until we cried, and the countless family gatherings where your radiant smile lit up the room.<img src="images/beatrice.jpg" alt="beatrice" class="center-image"> One of our most cherished memories is celebrating Mom’s birthday last year. The joy in the air was palpable as we all gathered around the table, sharing laughter and stories. It was a beautiful celebration, made even more special by the fact that you were with us, reminding us how precious these moments are. Your presence that day filled our hearts with gratitude and hope, and we celebrated not just Mom’s life but also the miracle of having you with us.<br><br>
+            Your strength and determination were evident throughout your life. Even during the toughest days, you faced each challenge with a smile and a resolve that taught us all the true meaning of resilience. You showed us how to find joy in the little things, and your laughter will forever echo in our hearts. <br><br><img src="images/nanakay.jpg" alt="nanakay" class="center-image">
             Though we are heartbroken by your absence, we carry your spirit with us. You have left an indelible mark on our hearts, and we promise to honor your memory by living life fully, just as you did. <br><br>
             We will always remember the courageous way you battled your illness, inspiring us with your grace and strength even when times were difficult. Thank you for being the best sister we could have ever asked for. We love you dearly and will hold you in our hearts forever. <br><br>
             Da Yie Onuapa <br><br>
+            
+            <div class="image-gallery">
+                <img src="images/millicent.jpg" alt="millicent">
+                <img src="images/pearlina.jpg" alt="pearlina">
+            </div>
         </p>
-
-        <div class="image-gallery">
-            <img src="images/Robert.jpg" alt="Robert">
-            <img src="images/beatrice.jpg" alt="beatrice">
-            <img src="images/millicent.jpg" alt="millicent">
-            <img src="images/nanakay.jpg" alt="nanakay">
-            <img src="images/pearlina.jpg" alt="pearlina">
-        </div>
 
         <h2>Tribute by Mother</h2>
         <p>
+            <img src="images/mommy.jpg" alt="Mommy" class="center-image">
             To my most cherished daughter, <br><br>
             As I gather my thoughts to honor you, I am overwhelmed by the love and light you brought into my life. For over two long years, you fought a courageous battle against your illness, displaying strength and grace that inspired everyone around you. <br><br>
             From the moment you entered my life, where the sun always seemed to shine a little brighter, you filled my heart with joy. I still remember that beautiful day when you were born, surrounded by the warmth of family and the vibrant colors of the blooming flowers in the park. Your first cries filled my heart with happiness, and I knew then that you were destined to bring joy to everyone you met. <br><br>
             Your laughter was contagious, and your spirit was unbreakable. Even in the darkest moments of your struggle, you radiated hope and positivity, reminding us all of the beauty of life. <br><br>
             You taught me the true meaning of resilience. Your determination to embrace each day, despite the challenges you faced, was a powerful testament to your character. You fought not only for yourself but also for those you loved, always putting others before you. <br><br>
             I fondly remember how you would always gist me about things I didn’t know, sharing your insights and experiences that made me see the world differently. We often found ourselves planning how to make money, brainstorming ideas and dreaming big together. Those moments were filled with laughter and hope for the future. <br><br>
-            I also recall how you would get upset each time I left for Takoradi for too long, expressing how much you missed my company. Your love and concern always made me feel valued and cherished. <br><br>
+            I also recall how you would get upset each time I left for Takoradi for too long, expressing how much you missed my company. Your love and concern always made me feel valued and cherished.<br><br>
             I remember those long days at Korle Bu Hospital, where I would walk to and fro to get your prescribed medicines. It was during one of those moments that I tragically fell from the staircase, a painful reminder of how fragile life can be. <br><br>
             I cherish the countless memories we created together—family outings, quiet moments at home, and your infectious smile that could light up any room. Your spirit will forever live on in my heart, guiding me through the pain of your absence. <br><br>
             As I celebrate your life, I find comfort in knowing that your legacy of love and courage will continue to inspire me and everyone who knew you. Though you are no longer with us, your memory will always be a source of strength and love. <br><br>
@@ -142,12 +173,9 @@
             Da Yie Meba<br><br> 
         </p>
 
-        <div class="image-gallery">
-            <img src="images/mommy.jpg" alt="Mommy">
-        </div>
-
         <h2>Tribute by Child</h2>
         <p>
+            <img src="images/PeeKay.jpg" alt="PeeKay" class="center-image">
             Tribute to My Mommy <br><br>
             Nana, you were my safe haven, the one I ran to every time Aunty Keziah threatened to scold me. I can still hear your comforting voice, always ready to ease my worries. I remember the day you thought I had gone missing. I had snuck into a neighbor’s room and kept quiet for so long that you walked miles searching for me, convinced I was lost. When you finally found me, you said, “If you hadn’t come back, nobody would have eaten in this house today!” Your love and concern always made me feel valued and cherished.<br><br>           
             I also remember our outings together. Every time we stepped out, I would spot something I wanted to buy, and you would sigh and playfully complain, “Why do you always want to buy everything you see?” Your humor made those moments special, turning simple errands into cherished memories filled with laughter.<br><br>         
@@ -156,15 +184,11 @@
             Da Yie Nana!<br><br>
         </p>
 
-        <div class="image-gallery">
-            <img src="images/PeeKay.jpg" alt="PeeKay">
-        </div>
-
         <a href="home.html" class="home-link">Back to Program</a>
     </div> 
 
     <footer>
         <h3>In Loving Memory of Regina Egyir</h3>
     </footer>
-</body>
+  </body>
 </html>
