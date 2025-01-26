@@ -38,7 +38,7 @@
         .container {
             max-width: 1000px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 50px;
             background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -71,6 +71,26 @@
             height: 150px; /* Set a height for the image */
             object-fit: cover; /* Ensure the image covers the area */
         }
+        .floating-image {
+            float: right; /* Float images to the right */
+            margin: 0 15px 15px 0; /* Space around floated images */
+            width: 120px; /* Set a width for the floating images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50px; /* Rounded corners for floating images */
+            opacity: 0; /* Start hidden */
+            transform: scale(0.9); /* Start slightly smaller */
+            animation: fadeInScale 0.5s forwards; /* Animation */
+        }
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
         .image-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -86,10 +106,21 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
             opacity: 0.9; /* Slightly reduce opacity for visibility */
         }
-        .image-gallery img:hover {
-            transform: scale(1.1); /* Scale up on hover */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
-            opacity: 1; /* Full opacity on hover */
+        
+        /* Media Queries for Responsiveness */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 600px; /* Fixed width for larger screens */
+            }
+            h1 {
+                font-size: 2.5em; /* Larger size for desktop */
+            }
+            h2 {
+                font-size: 2.8em; /* Larger size for desktop */
+            }
+            p {
+                font-size: 1.2em; /* Larger size for desktop */
+            }
         }
     </style>
 </head>
@@ -102,20 +133,24 @@
 <div class="container">
     <h2>Celebrating the Life of Nana</h2>
     <p>Ladies and gentlemen, family and friends,</p>
+    
+    <img src="images/egyir.jpg" alt="Egyir" class="floating-image">
     <p>We gather here today to celebrate the life of our beloved Regina Egyir, affectionately known as Nana. Regina was born on the 9th of May, 1990, to the late Rexford Egyir and Georgina Arthur. As the eldest of five siblings, she embodied the spirit of leadership and love from a young age.</p>
 
+    <img src="images/nanaa.jpg" alt="nanaa" class="floating-image">
     <p>Regina’s educational journey began at the Young Christian Preparatory School, where she laid the foundation for her bright future. From 1993 to 2002, she thrived in her studies, later continuing her education at Cobbah Yalley School, Effiakuma, from 2003 to 2007. After completing her basic education, Regina pursued her passion for beauty and style by training as a professional hairdresser at Bethel Saloon in Takoradi for three years.</p>
 
-    <img src="images/regina.jpg" alt="Regina" class="center-image">
-
+    <img src="images/amankwanoah.jpg" alt="amankwanoah" class="floating-image">
     <p>With her skills and determination, Regina opened her own hairdressing shop at New Site, Takoradi, marking the beginning of her entrepreneurial journey. In 2016, she moved to Kasoa, where she expanded her business to include an Indomie joint as a side, demonstrating her versatility and drive. It was during this time that she met a man, with whom she had a beautiful baby boy. Their union was celebrated through customary rites, showcasing her commitment to family. She later moved to Cape Coast to establish a cosmetic shop, further expanding her entrepreneurial ventures.</p>
 
     <p>Regina’s journey was not just about her personal ambitions. In 2021, she selflessly moved to her mother’s place in Kasoa to assist in her chop bar business, embodying the values of family and support.</p>
 
+    <img src="images/nana.jpg" alt="Nana" class="floating-image">
     <p>However, life presented Regina with challenges. In September 2022, she faced a significant health battle when she was diagnosed with cancer at the Korle Bu Teaching Hospital. After undergoing surgery, she displayed immense strength and resilience, enduring a month of treatment before being discharged in October 2022. Despite her challenges, Regina continued to manage her business alongside her mother, even adding the sale of slippers and sandals to her endeavors.</p>
 
     <p>As recent as September 2024, she sought medical attention for worsening waist pain, returning to Korle Bu for treatment. Yet, her spirit remained unbroken as she continued to work and care for her family. In December 2024, yearning for the comfort of her roots, she asked to return to Takoradi, where she had spent most of her life.</p>
 
+    <img src="images/Akua.jpg" alt="Akua" class="floating-image">
     <p>Tragically, her condition worsened upon her return. After being rushed to Daboase Hospital and later to Effia Nkwanta Hospital, Regina’s battle came to an end on the 25th of December, 2024.</p>
 
     <p>Nana has left a profound void in our hearts. Her laughter, love, and unwavering spirit will forever be cherished in our memories. As we reflect on her life, let us remember her strength, her dedication to family, and her entrepreneurial spirit that inspired us all.</p>
@@ -125,8 +160,6 @@
     <p><strong>Damirifa Due. Due na amanihunu. Da yie.</strong></p>
 
     <div class="image-gallery">
-        <img src="images/nana.jpg" alt="Nana">
-        <img src="images/Akua.jpg" alt="Akua">
         <img src="images/na1.jpg" alt="Nana">
         <img src="images/kukua.jpg" alt="Regiii">
     </div>
